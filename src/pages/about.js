@@ -15,6 +15,8 @@ export default ({ data }) => {
   )
 
   const {
+    firstName,
+    stageLastName,
     author,
     occupation,
     readingList,
@@ -49,7 +51,7 @@ export default ({ data }) => {
             ))}
           </p>
           <p className="i-5 mt-4 pt-2">
-            Hello there! My name is <b>{`${author}`}</b>. I am a&nbsp;
+            Hello there! My name is <b>{`${author}`}</b> though I also go by <b>{`${firstName} ${stageLastName}`}</b>. I am a&nbsp;
             <a
               href="https://www.dictionary.com/e/fictional-characters/padawan/"
               target="_blank"
@@ -86,7 +88,7 @@ export default ({ data }) => {
                   like what you <Link to="/resume">see</Link>, let's get
                   in&nbsp;
                   <a
-                    href="mailto:red.five@rebellion.com"
+                    href="mailto:robertejohnson10@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -122,6 +124,8 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
+        firstName
+        stageLastName
         unemployed
         occupation
         author
