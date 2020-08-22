@@ -7,7 +7,7 @@ import { Container, Image } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export default ({ data }) => {
-  const { unemployed, firstName, lastName, occupation } = data.site.siteMetadata
+  const { unemployed, firstName, lastName, stageLastName, occupation } = data.site.siteMetadata
   const { dark } = useContext(ThemeContext)
   return (
     <PageLayout>
@@ -33,7 +33,9 @@ export default ({ data }) => {
             }}
           >
             <span className="first-name">{firstName}</span>&nbsp;
-            <span className="last-name">{lastName}</span>
+            <span className="last-name">
+              { dark ? stageLastName : lastName}
+            </span>
           </h1>
           <p>
             <i>
@@ -45,7 +47,7 @@ export default ({ data }) => {
         <hr className="my-3 w-25" />
         <div className="d-md-inline-flex icons-container">
           <a
-            href="https://www.github.com"
+            href="https://github.com/RobertEJohnson"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -56,7 +58,7 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/robert-johnson-323bb2aa/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -67,7 +69,7 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="mailto:johndoe@gmail.com"
+            href="mailto:robertejohnson10@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -94,6 +96,7 @@ export const query = graphql`
   query {
     site {
       siteMetadata {
+        stageLastName
         unemployed
         firstName
         lastName
