@@ -17,7 +17,6 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
     <Helmet
       htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={canonical ? [{ rel: `canonical`, href: canonical }] : []}
       meta={[
         { name: `description`, content: metaDescription },
