@@ -90,13 +90,13 @@ body {
   &:hover {
     color: $faded-red;
   }
-  &.empire {
+  &.theatre {
     border-radius: 50%;
-    color: $white;
+    color: white;
     background: $black;
     &:hover {
-      color: $black;
-      background: $white;
+      color: $white;
+      background: $gray-700;
     }
   }
 }
