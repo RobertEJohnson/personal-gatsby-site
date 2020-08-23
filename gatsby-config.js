@@ -19,10 +19,10 @@ module.exports = {
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
     unemployed: true,
     designations: [
-      `Rad Dude`,
-      `Community Actor`,
-      `Cat Enthusiast`,
       `Creative Programmer`,
+      `Cat Enthusiast`,
+      `Community Actor`,
+      `Rad Dude`,
     ],
     readingList: [
       {
@@ -76,9 +76,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe's Personal Site`,
-        short_name: `J.Doe`,
-        description: `This is my personal site.`,
+        name: `Robert Johnson's Personal Site`,
+        short_name: `R.Johnson`,
+        description: `This is my personal site, get to know me a little better, or just check out my other links. Whatever works for you.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#fff`,
