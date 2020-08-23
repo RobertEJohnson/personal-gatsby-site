@@ -11,7 +11,7 @@ export default ({ data }) => {
   const { dark } = useContext(ThemeContext)
   return (
     <PageLayout>
-      <SEO title="Home" />
+      <SEO title={dark?"Robert Wolfe":"Robert Johnson"}/>
       <Container className="text-center pt-5 mt-5" fluid>
         <Image
           width="150"
@@ -40,7 +40,7 @@ export default ({ data }) => {
           <p>
             <i>
               {occupation} by day,&nbsp;
-              {dark ? `Imperial enforcer by night` : `Rebel scum by night`}
+              {dark ? `Community actor by night` : `Cat enthusiast by night`}
             </i>
           </p>
         </Container>
