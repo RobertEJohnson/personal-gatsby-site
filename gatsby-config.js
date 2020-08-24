@@ -26,38 +26,39 @@ module.exports = {
     ],
     readingList: [
       {
-        title: `Sapiens: A Brief History of Humankind`,
-        author: `Yuval Noah Harari`,
-        link: `https://www.goodreads.com/book/show/23692271-sapiens`,
+        title: `The Stormlight Archive`,
+        author: `Brandon Sanderson`,
+        link: `https://www.goodreads.com/series/49075-the-stormlight-archive`,
       },
       {
-        title: `Behave: The Biology of Humans at our Best and Worst`,
-        author: `Robert Sapolsky`,
-        link: `https://www.goodreads.com/book/show/31170723-behave`,
+        title: `The Wheel of Time`,
+        author: `Robert Jordan`,
+        link: `https://www.goodreads.com/search?q=The+Wheel+of+Time&qid=0MFDU7t1dN`,
       },
       {
-        title: `The Gene: An Intimate History`,
-        author: `Siddhartha Mukeherjee`,
-        link: `https://www.goodreads.com/book/show/27276428-the-gene`,
+        title: `Lord of the Rings`,
+        author: `J. R. R. Tolkien`,
+        link: `https://www.goodreads.com/book/show/33.The_Lord_of_the_Rings`,
       },
     ],
-    showsList: [
+    filmList: [
       {
-        title: `Avatar: The Last Airbender`,
-        author: `Micheal DiMartino, Bryan Konietzko`,
-        link: `https://www.imdb.com/title/tt0417299/`,
+        title: `What We Do in the Shadows`,
+        directors: `Jemaine Clement, Taika Waititi`,
+        link: `https://www.imdb.com/title/tt03416742/`,
       },
       {
-        title: `Love, Death & Robots`,
-        author: `Tim Miller`,
-        link: `https://www.imdb.com/title/tt9561862/`,
+        title: `Alien`,
+        directors: `Ridley Scott`,
+        link: `https://www.imdb.com/title/tt0078748/`,
       },
       {
-        title: `Star Wars: The Clone Wars`,
-        author: `George Lucas, Dave Filoni`,
-        link: `https://www.imdb.com/title/tt0458290/`,
+        title: `Step Brothers`,
+        directors: `Adam McKay`,
+        link: `https://www.imdb.com/title/tt0838283/?ref_=nv_sr_srsg_0`,
       },
     ],
+    countryList: ['Scotland', 'Germany', 'France'],
   },
   plugins: [
     `gatsby-plugin-preload-link-crossorigin`,

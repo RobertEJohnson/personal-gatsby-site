@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 import { ThemeContext, SEO } from "../utils"
 
 export default ({ data }) => {
-  const MediaLink = ({ title, author, link }) => (
+  const BookLink = ({ title, author, link }) => (
     <li key={title} style={{ color: "gray" }}>
       <a rel="noopener noreferrer" href={link}>
         {title}
@@ -14,20 +14,32 @@ export default ({ data }) => {
     </li>
   )
 
+  const FilmLink = ({ title, directors, link }) => (
+    <li key={title} style={{ color: "gray" }}>
+      <a rel="noopener noreferrer" href={link}>
+        {title}
+      </a>
+      &nbsp;-<i>{directors}</i>
+    </li>
+  )
+
+
   const {
     firstName,
     stageLastName,
     author,
     occupation,
     readingList,
-    showsList,
+    filmList,
     designations,
     unemployed,
+    countryList,
   } = data.site.siteMetadata
   const { toString } = useContext(ThemeContext)
 
-  const bookLinks = readingList.map(book => MediaLink(book))
-  const showLinks = showsList.map(show => MediaLink(show))
+  const bookLinks = readingList.map(book => BookLink(book))
+  const filmLinks = filmList.map(film => FilmLink(film))
+
 
   return (
     <PageLayout>
@@ -101,19 +113,19 @@ export default ({ data }) => {
           )}
           <hr />
           <h5 className="watch-list-title pt-4">
-            Here are a couple of books from my reading list:
+            Here are a few of my all time favorite book series:
           </h5>
           <ul style={{ fontSize: "0.9rem", listStyle: "none" }}>{bookLinks}</ul>
           <h5 className="watch-list-title pt-4">
-            Here are a couple of shows from my watch list:
+            Here are a some of my all time favorite films to watch:
           </h5>
-          <ul style={{ fontSize: "0.9rem", listStyle: "none" }}>{showLinks}</ul>
+          <ul style={{ fontSize: "0.9rem", listStyle: "none" }}>{filmLinks}</ul>
           <h5 className="watch-list-title pt-4">
-            Here are a couple of movies from my watch list:
+            Here are a couple of my favorite countries to visit:
           </h5>
-          <p>
-            <i>...waaaay too many to list.</i>
-          </p>
+          <ul style={{fontSize: "0.9rem", listStyleType: 'none', color: 'gray', marginBottom: '0px', paddingBottom: '15px'}}>
+            { countryList.map(country=><li key={country}>{country}</li>) }
+          </ul>
         </article>
       </Container>
     </PageLayout>
@@ -135,11 +147,12 @@ export const query = graphql`
           author
           link
         }
-        showsList {
+        filmList {
           title
-          author
+          directors
           link
         }
+        countryList
       }
     }
   }
