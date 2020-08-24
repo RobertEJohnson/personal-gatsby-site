@@ -48,9 +48,9 @@ export default ({ data }) => {
       <Container>
         <Image
           rounded
-          width="140"
-          height="140"
-          src={`../../icons/luke-${toString()}.png`}
+          width="250"
+          style={{borderRadius: '40px'}}
+          src={`../../icons/RobertJohnson.jpg`}
           alt={author}
         />
         <article className="w-75 m-auto pt-2 text-justify">
@@ -63,15 +63,7 @@ export default ({ data }) => {
             ))}
           </p>
           <p className="i-5 mt-4 pt-2">
-            Hello there! My name is <b>{`${author}`}</b> though I also go by <b>{`${firstName} ${stageLastName}`}</b>. I am a&nbsp;
-            <a
-              href="https://www.dictionary.com/e/fictional-characters/padawan/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              padawan
-            </a>
-            &nbsp;
+            Hey there! My name is <b>{`${author}`}</b> though I also go by <b>{`${firstName} ${stageLastName}`}</b>. I'm a&nbsp;
             <b>{occupation}</b> discovering the ways of the code. Lorem ipsum
             dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -83,11 +75,6 @@ export default ({ data }) => {
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
             laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p className="i-5">
-            Check out my projects to see what I've
-            been up to! Or check out my blog to see
-            what's recently caught my eye!
           </p>
         </article>
         <article className="w-75 m-auto">

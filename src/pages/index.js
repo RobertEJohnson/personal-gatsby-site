@@ -12,19 +12,13 @@ export default ({ data }) => {
   return (
     <PageLayout>
       <SEO title={dark?"Robert Wolfe":"Robert Johnson"}/>
-      <Container className="text-center pt-5 mt-5" fluid>
+      <Container className="text-center" fluid>
         <Image
-          width="150"
-          height="150"
           fluid
-          src={dark ? `../../icons/darth-vader.png` : `../../icons/r2-d2.png`}
+          src={dark ? `../../icons/seymour.png` : `../../icons/cat-walk.png`}
           alt={dark ? "Darth Vader" : "R2-D2"}
+          style={{borderRadius: '40px', maxHeight: '400px'}}
         />
-        {unemployed && (
-          <p className="mt-2">
-            <b> Hey! I am looking for new opportunities :)</b>
-          </p>
-        )}
         <Container className="py-0 my-0">
           <h1
             style={{
@@ -44,7 +38,7 @@ export default ({ data }) => {
             </i>
           </p>
         </Container>
-        <hr className="my-3 w-25" />
+
         <div className="d-md-inline-flex icons-container">
           <a
             href="https://github.com/RobertEJohnson"
@@ -87,6 +81,13 @@ export default ({ data }) => {
             />
           </a>
         </div>
+        <br/>
+        <br/>
+        {unemployed && (
+          <p className="mt-2">
+            <b> I'm looking for new opportunities! :)</b>
+          </p>
+        )}
       </Container>
     </PageLayout>
   )
