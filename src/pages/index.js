@@ -39,8 +39,8 @@ export default ({ data }) => {
           </h1>
           <p>
             <i>
-              {occupation} by day,&nbsp;
-              {dark ? `Community actor by night` : `Cat enthusiast by night`}
+              A {occupation} who's a&nbsp;
+              {dark ? <><span style={{color: '#fd1212', fontWeight: 'bold'}}>Community actor </span>by night</> : <><span style={{color: 'orange', fontWeight: 'bold'}}>Cat enthusiast</span> by day</>}
             </i>
           </p>
         </Container>
@@ -79,7 +79,7 @@ export default ({ data }) => {
               title="e-mail"
             />
           </a>
-          <a href="../../resume.pdf" target="_blank" download>
+          <a href="../../R_Johnson_Resume.pdf" target="_blank" download>
             <FontAwesomeIcon
               icon={["fas", "file-alt"]}
               className="icons file"
